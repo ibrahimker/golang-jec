@@ -35,11 +35,58 @@ func main() {
 	fmt.Println(orangKetiga, orangKeempat)
 
 	// underscore variable
-	orangKelima, _ := daftarOrang()
+	orangKelima, _, _ := daftarOrang()
 	fmt.Println(orangKelima)
+
+	// constanta
+	const nama3 string = "ibam"
+
+	// contoh if
+	fmt.Println(len(nama))
+	if len(nama) > 5 {
+		fmt.Println(nama)
+	}
+
+	fmt.Println("==============================")
+	//x, _ := daftarOrang()
+	//if x == "aku" {
+	//	fmt.Println(x)
+	//}
+
+	if x, _, err := daftarOrang(); err == nil {
+		fmt.Println(x)
+	} else {
+		fmt.Println(err)
+	}
+
+	score := 7
+	switch score {
+	case 0:
+		fmt.Println("jelek")
+	case 9:
+		fmt.Println("bagus")
+	default:
+		fmt.Println("mantap")
+	}
+
+	fmt.Println("===========START LOOPING===========")
+	//for (int i = 0; i < 9; i++) {
+	//	// isinya
+	//}
+	for i := 0; i < 9; i++ {
+		fmt.Println(i)
+	}
+
+	for {
+		if score == 10 {
+			break
+		}
+		fmt.Println("Score", score)
+		score++
+	}
 }
 
 // function sample
-func daftarOrang() (string, string) {
-	return "aku", "kamu"
+func daftarOrang() (string, string, error) {
+	return "aku", "kamu", nil
 }

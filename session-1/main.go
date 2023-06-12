@@ -61,7 +61,7 @@ func main() {
 
 	score := 7
 	switch score {
-	case 0:
+	case 0, 1, 2, 3, 4, 5:
 		fmt.Println("jelek")
 	case 9:
 		fmt.Println("bagus")

@@ -35,3 +35,43 @@ func TestGetWord(t *testing.T) {
 		}
 	})
 }
+
+func TestGetWord1(t *testing.T) {
+	type args struct {
+		i int
+	}
+	tests := []struct {
+		name string
+		args args
+		want string
+	}{
+		{
+			name: "should get fizz",
+			args: args{
+				i: 3,
+			},
+			want: "fizz",
+		},
+		{
+			name: "should get buzz",
+			args: args{
+				i: 5,
+			},
+			want: "buzz",
+		},
+		{
+			name: "should get fizzbuzz",
+			args: args{
+				i: 15,
+			},
+			want: "fizzbuzz",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := GetWord(tt.args.i); got != tt.want {
+				t.Errorf("GetWord() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

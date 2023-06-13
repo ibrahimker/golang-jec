@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestGetWord(t *testing.T) {
+func TestGetWordManual(t *testing.T) {
 	t.Run("Should Return Fizz", func(t *testing.T) {
 		got := GetWord(3)
 		want := "fizz"
@@ -36,7 +36,7 @@ func TestGetWord(t *testing.T) {
 	})
 }
 
-func TestGetWord1(t *testing.T) {
+func TestGetWordAutoGenerateByVSCode(t *testing.T) {
 	type args struct {
 		i int
 	}

@@ -8,14 +8,23 @@ func main() {
 	}
 }
 
-func GetWord(i int) string {
-	if i%3 == 0 && i%5 == 0 {
+// 0%3 = 0
+// 1%3 = 1
+// 2%3 = 2
+// 3%3 = 0
+// 4%3 = 1
+// dst
+// 6%3=0
+func GetWord(in int, options ...string) (out string) {
+	if in%3 == 0 && in%5 == 0 {
 		return "fizzbuzz"
-	} else if i%3 == 0 {
+	} else if in%3 == 0 {
 		return "fizz"
-	} else if i%5 == 0 {
+	} else if in%5 == 0 {
 		return "buzz"
+	} else if in%4 == 0 {
+		return "ho"
 	} else {
-		return fmt.Sprintf("%d", i)
+		return fmt.Sprintf("%d", in)
 	}
 }

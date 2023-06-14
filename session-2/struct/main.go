@@ -7,6 +7,10 @@ type User struct {
 	age  int
 }
 
+func (u User) GetName() string {
+	return u.name
+}
+
 var users []User
 var users2 []*User
 
